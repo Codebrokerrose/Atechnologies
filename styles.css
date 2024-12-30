@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to left, rgba(0, 153, 255, 0.592),rgba(0, 0, 255, 0.553),rgba(0, 0, 255, 0.236),rgba(0, 145, 255, 0.422));
+    
+  }
+  
+  header {
+    background-image: linear-gradient(to right, #438b96, #09097c);
+    padding: 20px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-container {
+    
+    display: flex;
+    align-items: center;
+    
+    gap: 10px; 
+  }
+  
+  .logo {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+  }
+  .logo-image {
+    height: 50px; 
+    width: auto; 
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+ 
+  .form-section {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.4); 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(14px);
+  
+  }
+  
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 480px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  .name-fields input {
+    flex: 1;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f88f8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover {
+    background-color: #3556f9;
+  }
+  
+  @media (max-width: 600px) {
+    .name-fields {
+      flex-direction: column;
+    }
+  }
+  

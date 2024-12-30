@@ -1,0 +1,183 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+   width: 100%;
+   
+    background-color: #4c6782;
+   background-image: url('DALL·E\ 2024-11-17\ 12.47.46\ -\ An\ illustration\ of\ a\ vibrant\ and\ modern\ technology\ coaching\ center.\ The\ scene\ includes\ students\ working\ collaboratively\ on\ internship\ projects\ with\ la.webp');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.form-container span{
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+.write1{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%,100%{
+        color: #fff;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff,0 0 40px #00b3ff,0 0 80px #00b3ff,0 0 120px #00b3ff,0 0 200px #00b3ff;;
+    }
+}
+.write2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 1px 0 #6e88b4 ,0 2px 0 #2b1b7c ,0 3px 0 #080938 ,0 4px 0 #efefee ,0 30px 5px rgba(0,0,0,0.1)  ;
+    color:white;
+    position: relative;
+    animation: animates 2s linear infinite;
+    animation-direction: alternate;
+    
+}
+
+
+
+@keyframes animates{
+           from{transform: rotate(5deg);}
+           to{transform: rotate(-5deg);}
+}
+.form-container {
+    
+    display: flex;
+    
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+    background-color: rgb(14, 14, 72,0.9);
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    display: flex;
+    
+    
+}
+
+  
+.form-container::after, .form-container::before{
+    content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+
+
+
+}
+.form-container::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+
+
+
+.form-section {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form-section h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #0a0707;
+}
+
+.form-section p {
+    margin: 0 0 20px;
+    color: #050404;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form label {
+    margin-top: 10px; /* Space above each label */
+    margin-bottom: 5px; /* Space below each label */
+    color: #e3e8eb;
+    font-size: 19px;
+    border: #080808;
+    text-decoration:black;
+    font-weight: bold;
+
+}
+
+form input, form select, form textarea, form button {
+    margin-bottom: 15px; /* Consistent space between input fields */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #0f111e;
+    border-radius: 4px;
+    border-color: #050404;
+    color: #130e22;
+    
+}
+
+form textarea {
+    resize: none;
+    color: #000000;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Ensure space between checkbox and button */
+}
+
+.checkbox-container label {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+
+
+
+.btn {
+   
+    font-weight: 700;
+    padding: 0.5em 1em;
+    background-color: #150df1;
+    border: 10px solid #050404;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+
+}
+
+form button:hover {
+    background-color: #1e548e;
+    transform: translateY(-10px);
+}

@@ -1,0 +1,105 @@
+/* Footer Section */
+.footer-section {
+    background-color: #194186;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    /* height: 300px; */
+    text-align: center;
+    padding: 50px;
+    /* width: 100%; */
+}
+
+
+
+.footer-line {
+    width: 501px;
+    margin: 20px auto;
+}
+
+.icon {
+    margin: 0 15px;
+}
+
+.footer-text {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.footer-logo {
+    width: 95px;
+    height: 95px;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.footer-section h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-section .footer-line {
+    border: 0;
+    height: 1px;
+    background-color: #fff;  /* White line separator */
+    width: 80%;
+    margin: 20px auto;
+}
+
+.footer-section .footer-text {
+    font-size: 14px;
+    color: #aaa;  /* Light gray text for copyright */
+    margin-top: 10px;
+}
+
+/* Links Styling */
+.footer-section div {
+    margin-top: 20px;
+}
+
+.footer-section span {
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-section span:hover {
+    color: #00b3ff;  /* Hover effect for links */
+}
+
+/* Social Media Icons */
+.footer-section .icon {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section .icon:hover {
+    color: #00b3ff;  /* Blue hover effect for icons */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-section h1 {
+        font-size: 20px;
+    }
+
+    .footer-section span {
+        font-size: 14px;
+    }
+
+    .footer-section .icon {
+        font-size: 20px;
+    }
+
+    .footer-section .footer-line {
+        width: 90%;
+    }
+}

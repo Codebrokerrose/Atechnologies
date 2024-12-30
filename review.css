@@ -1,0 +1,58 @@
+/* Google Reviews Section */
+.google-reviews {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.google-reviews h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.review p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.top-review {
+    background-color: #e6f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leave-review p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.leave-review a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.leave-review a:hover {
+    text-decoration: underline;
+}
