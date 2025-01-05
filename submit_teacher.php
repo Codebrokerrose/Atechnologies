@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate fields
     if (empty($first_name) || empty($last_name) || empty($email) || empty($phone_number) || empty($qualification) || empty($subject)) {
         echo "<script>alert('All fields are required!');</script>";
-        echo "<script>window.location.href = 'home.php';</script>";
+        echo "<script>window.location.href = 'index.php';</script>";
         exit();
     }
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result->num_rows > 0) {
         echo "<script>alert('This email is already registered. Please use a different email.');</script>";
-        echo "<script>window.location.href = 'home.php';</script>";
+        echo "<script>window.location.href = 'index.php';</script>";
         exit();
     }
 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
         // Redirect back to the form page with success message
         echo "<script>alert('Form submitted successfully!');</script>";
-        echo "<script>window.location.href = 'home.php';</script>";
+        echo "<script>window.location.href = 'index.php';</script>";
     } else {
         echo "Error: " . $stmt->error;
     }

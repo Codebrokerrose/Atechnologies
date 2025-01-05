@@ -170,7 +170,7 @@
     </div>
     <button class="toggle-btn" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
-      <li><a href="home.php">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="contact.php">Contact</a></li>
       <li><a href="about.php">About</a></li>
       <li><a href="blog.php">Blog</a></li>
