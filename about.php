@@ -232,10 +232,9 @@
             <img src="https://media.licdn.com/dms/image/v2/C5103AQE4bILS5eFDjQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1537284944590?e=1740614400&v=beta&t=1MREgJclE8jmz8YxOAqaMzWlUlZO08yQB-XfjMiOSXs" alt="Person's Image">
         </div>
         <div class="testimonial-content">
-            <p>“A skilled software developer with a passion for crafting innovative solutions. Explore his website
-            to discover projects, expertise, and insights that showcase his technical prowess and creative problem-solving.”</p>
+            <p>“Empowering businesses with cutting-edge IT solutions and shaping the future through impactful education services.”</p>
             <strong>- Amitava Biswas</strong>
-            <div class="testimonial-role">Owner of AB Technical</div>
+            <div class="testimonial-role">Managing Director, ATechnologies</div>
         </div>
     </div>
 
@@ -271,7 +270,7 @@ if ($conn->connect_error) {
 $sql = "SELECT name, description, image_url, linkedin_url FROM team_members";
 $result = $conn->query($sql);
 ?>
-
+<h1 style="text-align:center; margin-top:20px; ">Meet the Team</h1>
 <div class="box-container">
     <?php
     if ($result->num_rows > 0) {

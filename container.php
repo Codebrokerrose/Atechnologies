@@ -55,10 +55,12 @@
     <div class="admission-page">
         <div class="admission-container">
             <!-- <button type="button" class="admission-item" onclick="" >Admission Helper</button> -->
+             <button type="button" class="admission-item" onclick = " location.href = 'internship.php';">Internship</button>
             <button type="button" class="admission-item" onclick = "location.href = 'teach.php';">Teachers corner</button>
             <button type="button" class="admission-item" onclick = " location.href = 'socialwork.php';">Social Work</button>
-            <button type="button" class="admission-item" onclick = " location.href = 'internship.php';">Internship</button>
-            <button type="button" class="admission-item">Live Project</button>
+            
+            <!-- <button type="button" class="admission-item">Live Project</button> -->
+            <button type="button" class="admission-item" onclick = "location.href = 'dataentry.php';">Admin Control</button>
             <!-- <button type="button" class="admission-item">Services</button> -->
         </div>
     </div>

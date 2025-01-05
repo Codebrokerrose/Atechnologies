@@ -96,11 +96,12 @@ include "nav.php";
    <div class="contact-info-background">
     <img class="contact-logo" src="./image/logo.jpeg" alt="not loaded">
     <h1 class="contact-info-heading">Our Office</h1>
-    <h3 class="contact-info-subheading">A Technology</h3>
-    <h4>510 W Hastings St., Unit 803, Vancouver, BC V6B 1L8</h4>
-    <h4>E-mail: info@atech.ca</h4>
-    <h4>Tel: 604-245-5875</h4>
-    <h4>Toll Free: 1(800)753-2531</h4>
+    <h3 class="contact-info-subheading">A Technologies</h3>
+    
+    <h4>E-mail: Atechnologies@atechkol.in</h4>
+    <h4>Ph no. +91 81000 59162 / 89103 50813</h4>
+
+    <h4>Pragati Apartment, Mahatma Gandhi Rd, Greater Bakul Bithi,<br><br> Thakurpukur, Kolkata, West Bengal 700063</h4>
     <br>
    </div>
 

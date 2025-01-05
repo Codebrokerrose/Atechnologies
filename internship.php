@@ -11,36 +11,6 @@ if ($conn->connect_error) {
 $sql = "SELECT id, title, content, video_url FROM work";
 $result = $conn->query($sql);
 
-// Initialize a variable to track form visibility
-$formVisible = false;
-
-// Admin password
-$admin_password = "123456789";
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $password = $_POST['password'];
-    $title = $_POST['title'] ?? '';
-    $content = $_POST['content'] ?? '';
-    $video_url = $_POST['video_url'] ?? '';
-
-    if ($password === $admin_password) {
-        $formVisible = true; // Set visibility to true for the form
-
-        if (!empty($title) && !empty($content)) {
-            $stmt = $conn->prepare("INSERT INTO work (title, content, video_url) VALUES (?, ?, ?)");
-            $stmt->bind_param("sss", $title, $content, $video_url);
-
-            if ($stmt->execute()) {
-                echo "<script>alert('Video added successfully!');</script>";
-                echo '<meta http-equiv="refresh" content="2">';
-            } else {
-                echo "<script>alert('Error: " . $stmt->error . "');</script>";
-            }
-        }
-    } else {
-        echo "<script>alert('Invalid password!');</script>";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -161,86 +131,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             transform: scale(1.2);
         }
 
-        /* Form Styles */
-        .password-form {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding-right: 50px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
         }
-
-        .password-form input,
-        .password-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .password-form button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .password-form button:hover {
-            background-color: #0056b3;
-        }
-
-        .add-video-form {
-            max-width: 700px;
+        .pdf-container {
             margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            display: none; /* Hide the form initially */
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .add-video-form.visible {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .add-video-form input,
-        .add-video-form textarea,
-        .add-video-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            width: 80%;
+            height: 500px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
-        .add-video-form button {
+        .download-btn {
+            margin: 20px;
+            padding: 10px 20px;
             background-color: #007bff;
             color: white;
-            border: none;
-            cursor: pointer;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
         }
-
-        .add-video-form button:hover {
+        .download-btn:hover {
             background-color: #0056b3;
         }
+
+        
     </style>
-    <script>
-        function showForm() {
-            const form = document.querySelector('.add-video-form');
-            form.style.display = 'block';
-            setTimeout(() => {
-                form.classList.add('visible');
-            }, 50); // Slight delay to apply transition effect
-        }
-    </script>
+    
 </head>
 <body>
 
@@ -258,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="small-img-row">
                             <div class="small-img">
                                 <img src="https://myviewboard.com/blog/wp-content/uploads/2020/07/Self-Study-with-Video-Assisted-Learning-scaled.jpg" alt="' . htmlspecialchars($row["title"]) . '">
-                                <img src="button.png" class="play-btn" onclick="playVideo(\'' . htmlspecialchars($row["video_url"]) . '\')">
+                                <img src="./image/button.png" class="play-btn" onclick="playVideo(\'' . htmlspecialchars($row["video_url"]) . '\')">
                             </div>
                             <p>
                                 <b>' . htmlspecialchars($row["title"]) . ':</b> ' . htmlspecialchars($row["content"]) . '
@@ -277,8 +197,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <source id="videoSource" src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <img src="cross.png" class="close-btn" alt="Close" onclick="stopVideo()">
+            <img src="./image/cross.png" class="close-btn" alt="Close" onclick="stopVideo()">
         </div>
+
+        <h1>View and Download Our Brochure</h1>
+    
+    
+
+    <!-- Embed PDF Viewer -->
+    <div class="pdf-container">
+        <iframe 
+            src="./image/Brochure.pdf" 
+            width="100%" 
+            height="100%" 
+            style="border: none;"
+        ></iframe>
+    </div>
+
+    <!-- Download PDF Button -->
+    <a href="./image/Brochure.pdf" class="download-btn" download>Download Our Brochure</a>
+       
 
          <script>
             const videoPlayer = document.getElementById('videoPlayer');
@@ -304,27 +242,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         </script>
 
+        <?php
+    include "galary.php";
+    ?>
 
-
-        <div class="password-form">
-            <h2>Admin - Password Required to Add a Video:</h2>
-            <form method="POST">
-                <input type="password" name="password" placeholder="Enter Admin Password" required>
-                <button type="button" onclick="showForm()">Validate</button>
-            </form>
-        </div>
-
-        <div class="add-video-form <?php echo $formVisible ? 'visible' : ''; ?>">
-            <h2>Add a New Work Video</h2>
-            <form method="POST">
-                <input type="hidden" name="password" value="<?php echo $admin_password; ?>">
-                <input type="text" name="title" placeholder="Enter Video Title" required>
-                <textarea name="content" placeholder="Enter Video Description" required></textarea>
-                <input type="text" name="video_url" placeholder="Enter video URL">
-                <button type="submit">Add Video</button>
-            </form>
-        </div>
-    </div>
+<?php
+include "footer.php";
+?>
 
     <?php
     $conn->close();

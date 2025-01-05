@@ -12,10 +12,13 @@
             </div>
             <hr class="footer-line">
             <div>
-                <i class="fa fa-google icon" aria-hidden="true"></i>
-                <i class="fa fa-facebook-square icon" aria-hidden="true"></i>
-                <i class="fa fa-instagram icon" aria-hidden="true"></i>
-                <i class="fa fa-youtube-play icon" aria-hidden="true"></i>
+                <a href="https://www.atechkol.in/" class="icon" target="_blank">
+                
+                <i class="fa fa-google icon" aria-hidden="true"></i></a>
+                <!-- <i class="fa fa-facebook-square icon" aria-hidden="true"></i> -->
+                <!-- <i class="fa fa-instagram icon" aria-hidden="true"></i> -->
+                 <a href="https://www.youtube.com/@ATechnologies-e6m" class="icon" target="_blank">
+                <i class="fa fa-youtube-play icon" aria-hidden="true"></i></a>
                 <i class="fa fa-twitter-square icon" aria-hidden="true"></i>
 
                 <!-- LinkedIn Icon -->

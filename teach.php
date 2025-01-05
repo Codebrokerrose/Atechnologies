@@ -18,7 +18,7 @@
     include "nav.php";
   ?>
 
-  <main>
+  <main style="position:relative; top:80px;">
     <section class="form-section" >
       <h2>Teacher Hiring</h2>
       <form method="POST" action="submit_teacher.php">
@@ -44,6 +44,10 @@
         <div class="form-group">
             <label for="qualification">Qualification *</label>
             <input type="text" id="qualification" name="qualification" placeholder="e.g., B.Sc, M.Sc, BCA, MCA" required>
+          </div>
+          <div class="form-group">
+            <label for="experience">Experience *</label>
+            <input type="text" id="experience" name="experience" placeholder="e.g., 2years, 3 years, 5 years" required>
           </div>
   
           <div class="form-group">

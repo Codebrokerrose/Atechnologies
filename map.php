@@ -102,6 +102,28 @@
         <h1>Contact Us</h1>
     </div> -->
 
+    <div style="display:flex; ">
+    <div class="contact-form">
+        <h2>College Contact Form</h2>
+        <form method="POST" action="">
+            <input type="text" name="name" placeholder="Enter your College name" required>
+            <input type="email" name="email" placeholder="Enter your College email" required>
+            <textarea name="message" placeholder="Enter your message" required></textarea>
+            <button type="submit" name="submit">Send</button>
+        </form>
+
+        <div class="message">
+            <?php
+            if (isset($success)) {
+                echo "<p class='success'>$success</p>";
+            }
+            if (isset($error)) {
+                echo "<p class='error'>$error</p>";
+            }
+            ?>
+        </div>
+    </div>
+
     <div class="contact-form">
         <h2>Send a Message</h2>
         <form method="POST" action="">
@@ -122,6 +144,7 @@
             ?>
         </div>
     </div>
+        </div>
 
     <div class="map-container">
         <iframe 
@@ -132,5 +155,9 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+
+    <?php
+    include "attachedpeople.php"; 
+    ?>
 </body>
 </html>

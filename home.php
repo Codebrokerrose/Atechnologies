@@ -48,7 +48,7 @@
        
         .background-section {
             position: relative;
-            height: 600px;
+            /* height: 600px; */
         }
 
         .background-video-container {
@@ -119,7 +119,7 @@
 
     .purpose-image {
         width: 100%;
-        height: 75%;
+        height: 60%;
         border-radius: 20px;
         margin-bottom: 20px;
     }
@@ -134,6 +134,7 @@
         margin-top: 10px;
         color: rgb(88, 84, 84);
         line-height: 1.8;
+        font-size: 1rem;
     }
 
         .purpose-description {
@@ -191,7 +192,7 @@
             box-shadow: 0px 0px 30px rgb(166, 166, 248);
         }
         /* Responsive Styles */
-    @media (max-width: 768px) {
+    @media (max-width: 899px) {
         .image-container {
             flex-direction: column;
             align-items: center;
@@ -203,6 +204,7 @@
         }
     }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
       <link rel="shortcut icon" href="./image/logo.jpeg" type="image/x-icon">
 </head>
 <body>
@@ -211,10 +213,66 @@
   ?>
 
     <section class="background-section">
-        <div class="background-video-container">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./image/slide1.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2 style="color: white; background-color: rgba(0, 0, 0, 0.5);">Workshop</h2>
+                <p style="color: white;background-color: rgba(0, 0, 0, 0.5);">Conducted a
+workshop on
+Internship Program
+at Dhruba Chand
+Halder College for
+over 500 students
+on 20.12.2024.</p>
+            </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+            <img src="./image/slide2.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2 style="color: white; background-color: rgba(0, 0, 0, 0.5);">Internship</h2>
+                <p style="color: white; background-color: rgba(0, 0, 0, 0.5);">Conducted a
+workshop on
+Internship Program
+at Dhruba Chand
+Halder College for
+over 500 students
+on 20.12.2024.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="./image/slide3.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2 style="color: white; background-color: rgba(0, 0, 0, 0.5);">Workshop</h2>
+                <p style="color: white; background-color: rgba(0, 0, 0, 0.5);">Conducted a
+workshop on
+Internship
+Program at East
+Calcutta Girls
+College and signed MoU on
+12.12.2024.</p>
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <!-- <div class="background-video-container">
             <video autoplay loop muted class="background-video">
                 <source src="./image/video1.mp4" type="video/mp4">
-                 <!-- <source src="./image/video2.mp4" type="video/mp4" > -->
+                 
             </video>
         </div>
         <div class="background-content">
@@ -222,8 +280,11 @@
             <h1 class="background-title">WELCOME TO <br> ATECHNOLOGIES</h1>
             <p>We are a leading technology company that provides high-quality solutions for businesses .</p> <br>
             <button class="story-button" onclick="window.location.href='about.php'">OUR STORY</button>
-        </div>
+        </div> -->
     </section>
+
+    <br> 
+
     <?php
     include "container.php";
     ?>
@@ -245,6 +306,11 @@
             <img src="https://cdn.prod.website-files.com/5f2b1efb0f881760ffdc5c96/63c12849a1c7e9df64c819fc_programming-languages-shutterstock-1680857539.webp" class="purpose-image">
             <h2 class="purpose-title-item">Learn Programming Languages</h2>
             <h4 class="description">We teach the basics of programming languages like Python, Java, and C++</h4>
+        </div>
+        <div class="purpose-item">
+            <img src="https://images.pexels.com/photos/12863114/pexels-photo-12863114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="purpose-image">
+            <h2 class="purpose-title-item">Hardware and Embedded Systems</h2>
+            <h4 class="description">We teach the basics of electronics and embedded systems </h4>
         </div>
         
     </div>
@@ -273,8 +339,19 @@
     include "map.php";
     ?>
 
+    
+
     <?php
     include 'footer.php';
   ?>
 </body>
 </html>
+<script>
+    const myCarouselElement = document.querySelector('#myCarousel')
+
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  touch: false
+})
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

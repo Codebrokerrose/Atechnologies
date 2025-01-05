@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,28 +88,58 @@
       transform: scale(1.1);
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      nav {
-        flex-wrap: wrap;
+    .toggle-btn {
+      display: none;
+      font-size: 1.5rem;
+      color: #ffffff;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 995px) {
+      .nav-links {
+      
+      gap: 20px;
+     
+    }
+      .toggle-btn {
+        display: block;
       }
 
       .nav-links {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #174a8a;
+        width: 100%;
+        padding: 0 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
       }
 
-      .nav-button {
-        margin-top: 10px;
+      .nav-links.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        margin-top:17px;
+      }
+
+      .nav-links li {
+        width: 100%;
+        padding: 10px 0;
+        text-align:center;
+        background-color:rgba(0, 0, 0, 0.3);
+        padding-top:20px;
+        padding-bottom:20px;
       }
     }
 
     @media (max-width: 480px) {
-      .nav-links {
-        gap: 10px;
-      }
-
       .nav-links a {
         font-size: 0.9rem;
       }
@@ -135,9 +164,11 @@
  
   <nav>
     <div class="nav-logo">
-      <img class="logo" src="./image/logo.jpeg" alt="Logo">
+      <a href="https://www.linkedin.com/company/a-technologieskol/posts/?feedView=all" class="icon" target="_blank">
+      <img class="logo" src="./image/logo.jpeg" alt="Logo"></a>
       <span class="logo-text">ATECHNOLOGIES</span>
     </div>
+    <button class="toggle-btn" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
       <li><a href="home.php">Home</a></li>
       <li><a href="contact.php">Contact</a></li>
@@ -147,6 +178,13 @@
     </ul>
     <button class="nav-button" onclick="location.href = './Atech/studentform.php';">Join</button>
   </nav>
-  
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
